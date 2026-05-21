@@ -30,7 +30,7 @@
         </ConfigTestElement>
         <hashTree/>
         <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener (InfluxDB)">
-          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="influxdbMetricsSender" elementType="Argument">
                 <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
@@ -80,10 +80,9 @@
             </collectionProp>
           </elementProp>
           <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
-          <intProp name="QUEUE_SIZE">5000</intProp>
         </BackendListener>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Posts">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Posts" enabled="true">
           <stringProp name="HTTPSampler.path">/posts</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>

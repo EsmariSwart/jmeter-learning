@@ -9,28 +9,28 @@
     <hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Ultimate Thread Group (Stress 10 to 200)">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="step_10">
+          <collectionProp name="606140975">
             <stringProp name="0_threads">10</stringProp>
             <stringProp name="1_initial_delay">0</stringProp>
             <stringProp name="2_startup_time">10</stringProp>
             <stringProp name="3_hold_time">60</stringProp>
             <stringProp name="4_shutdown_time">5</stringProp>
           </collectionProp>
-          <collectionProp name="step_50">
+          <collectionProp name="737310748">
             <stringProp name="0_threads">40</stringProp>
             <stringProp name="1_initial_delay">10</stringProp>
             <stringProp name="2_startup_time">20</stringProp>
             <stringProp name="3_hold_time">60</stringProp>
             <stringProp name="4_shutdown_time">5</stringProp>
           </collectionProp>
-          <collectionProp name="step_100">
+          <collectionProp name="767816732">
             <stringProp name="0_threads">50</stringProp>
             <stringProp name="1_initial_delay">30</stringProp>
             <stringProp name="2_startup_time">30</stringProp>
             <stringProp name="3_hold_time">60</stringProp>
             <stringProp name="4_shutdown_time">5</stringProp>
           </collectionProp>
-          <collectionProp name="step_200">
+          <collectionProp name="1165539836">
             <stringProp name="0_threads">100</stringProp>
             <stringProp name="1_initial_delay">60</stringProp>
             <stringProp name="2_startup_time">60</stringProp>
@@ -39,8 +39,8 @@
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
@@ -113,6 +113,14 @@
             </value>
           </objProp>
           <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">500</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
         </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
         <hashTree/>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">

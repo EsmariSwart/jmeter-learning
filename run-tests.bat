@@ -99,7 +99,9 @@ exit /b 0
 :phase_has_runnable_dir
 set "FOUND=1"
 for /f "delims=" %%F in ('dir /s /b /o:n "%~1\*.jmx" 2^>nul') do (
-  findstr /m /c:"<ThreadGroup" "%%F" >nul 2>&1
+  REM Match stock <ThreadGroup as well as plugin variants like
+  REM <kg.apc.jmeter.threads.UltimateThreadGroup, SetupThreadGroup, etc.
+  findstr /r /c:"<[a-zA-Z0-9._]*ThreadGroup" "%%F" >nul 2>&1
   if not errorlevel 1 set "FOUND=0"
 )
 exit /b !FOUND!
@@ -107,7 +109,7 @@ exit /b !FOUND!
 :phase_has_runnable_root
 set "FOUND=1"
 for %%F in ("scripts\*.jmx") do (
-  findstr /m /c:"<ThreadGroup" "%%F" >nul 2>&1
+  findstr /r /c:"<[a-zA-Z0-9._]*ThreadGroup" "%%F" >nul 2>&1
   if not errorlevel 1 set "FOUND=0"
 )
 exit /b !FOUND!
@@ -130,7 +132,9 @@ exit /b 0
 :register_test
 set "JMX=%~1"
 if not exist "%JMX%" exit /b 0
-findstr /m /c:"<ThreadGroup" "%JMX%" >nul 2>&1
+REM Accept any thread-group element (stock or plugin), e.g.
+REM <ThreadGroup, <SetupThreadGroup, <kg.apc.jmeter.threads.UltimateThreadGroup
+findstr /r /c:"<[a-zA-Z0-9._]*ThreadGroup" "%JMX%" >nul 2>&1
 if errorlevel 1 exit /b 0
 
 set /a COUNT+=1

@@ -19,7 +19,7 @@
       </ThreadGroup>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
-          <intProp name="HTTPSampler.connect_timeout">5000</intProp>
+          <intProp name="HTTPSampler.connect_timeout">15000</intProp>
           <intProp name="HTTPSampler.response_timeout">30000</intProp>
           <stringProp name="HTTPSampler.domain">jsonplaceholder.typicode.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>

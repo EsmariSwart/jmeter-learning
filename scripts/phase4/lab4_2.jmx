@@ -11,7 +11,6 @@
           </elementProp>
         </collectionProp>
       </elementProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Per-Agent Threads">
